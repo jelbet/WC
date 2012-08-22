@@ -1,0 +1,58 @@
+<html>
+<head>
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ <script type="text/javascript" src="automaton.js"></script>    
+<script>
+var HTML_FILE_URL = 'http://localhost/wc/test.c';
+
+
+	function readFile(file){
+		var xhr = new XMLHttpRequest();
+		xhr.open("GET",file,false);
+		xhr.send(null)
+	
+		if (xhr.status==200){
+			file = xhr.responseText
+		} else alert("Error executing XMLHttpRequest call!");
+
+		return file;
+
+	}
+	function readCSV(){
+		var file = readFile('http://localhost/wc/automaton.csv');
+		var noLinea = file.split(",");	
+		var aux = 0;
+
+		for(var  i =0 ; i< 71; i++){
+			for(var  j = 0 ; j < 256; j++){
+				automaton[i][j] = noLinea[aux];
+				aux++;
+			}
+		}
+		
+		return automaton;
+
+	}
+	var x =  readFile('http://localhost/wc/test.c');
+
+	readCSV();
+
+
+
+
+</script> 
+<script type="text/javascript" src="functions.js"></script>  
+<script type="text/javascript" src="ansic.js"></script>  
+<script>
+
+alert(ansic.parse("int x = ;"));
+
+
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

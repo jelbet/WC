@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>
+W.C. - Web C Compiler :)
+</title>
+<!-- Query is imported for ease of usage -->
+<style>
+body{
+	 background-color:#000;
+	 color:#5fba3d;
+	 font-family:courier;
+	 }
+	 
+	 textarea#text{
+		 
+		color:#5fba3d;	 
+		font-family:courier;
+		 
+		 }
+</style>
+<script> 
+var code = "";
+var tree =  "";
+		var objTree = [];
+		
+		var myTable = {};
+
+</script>
+
+<script src="js/jquery-1.7.1.min.js"></script>
+<script src="js/jquery-ui-1.8.17.custom.min.js"></script>
+
+<!-- Analizers -->
+<script type="text/javascript" src="js/stdlib.js"></script>  
+<script type="text/javascript" src="automaton.js"></script>    
+<script type="text/javascript" src="analex.js"></script>  
+<script type="text/javascript" src="functions.js"></script>  
+<script type="text/javascript" src="ansic_ast.js"></script>  
+<script type="text/javascript" src="semantic.js"></script>  
+<script type="text/javascript" src="ansic.js"></script>  
+
+
+
+<script src="js/logistics.js"></script>
+<script src="js/textarea.js"></script>
+<!-- Style needed for things to look cool -->
+<link rel="StyleSheet" href="css/style.css"></link>
+<link rel="StyleSheet" href="css/custom-theme/jquery-ui-1.8.17.custom.css"></link>
+<link rel="shortcut icon" href="favicon.ico" />
+
+</head>
+<body>
+<div id="total-wrapper">
+<h1>WC - The Web Based ANSI C Compiler! \m/</h1>
+<div id="text-wrapper">
+<textarea id="text">
+</textarea>
+</div>
+<input type="button" value="Compile" id="compile"></input>
+</div>
+<div id="terminal-dialog">
+$ root@wc-test/ - ./Anasin input <br><br>
+<div id ="result" style="color:#fff;font-size:14px">
+</div>
+<!--
+<textarea id="terminal">
+</textarea>
+-->
+</div>
+</body>
+</html>
